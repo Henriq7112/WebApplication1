@@ -10,7 +10,7 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Migrations
 {
-    [DbContext(typeof(AppDbConetx))]
+    [DbContext(typeof(AppDbContext))]
     [Migration("20251107193015_M01-AddTableVeiculo")]
     partial class M01AddTableVeiculo
     {

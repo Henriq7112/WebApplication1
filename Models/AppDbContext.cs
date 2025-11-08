@@ -2,9 +2,9 @@
 
 namespace WebApplication1.Models
 {
-    public class AppDbConetx : DbContext
+    public class AppDbContext : DbContext
     {
-        public AppDbConetx(DbContextOptions<AppDbConetx> options) : base(options)  { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)  { }
 
         public DbSet<Veiculo> Veiculos { get; set; }
     }
