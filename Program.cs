@@ -1,8 +1,9 @@
-using WebApplication1.Models;   
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Localization;     
+using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using System.Globalization;
+using WebApplication1.Models;   
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,8 +24,8 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.LoginPath = "/Usuarios/AccessDenied";
-        options.AccessDeniedPath = "/Usuarios/Login";
+        options.LoginPath = "/Usuarios/Login";
+        options.AccessDeniedPath = "/Usuarios/AccessDenied"; 
     });
 
 var app = builder.Build();
